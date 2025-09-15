@@ -129,15 +129,35 @@ bot.on("text", async (ctx) => {
       s.message = text;
 
       // ساخت پیام نهایی
-      let summary = ✅ استعلام جدید:\n\n👤 نام: ${s.name}\n📱 موبایل: ${s.phone}\n✉ ایمیل: ${s.email}\n🌆 شهر: ${s.city}\n🏗 محصول: ${s.product}\n;
+      let summary = `✅ استعلام جدید:
+
+👤 نام: ${s.name}
+📱 موبایل: ${s.phone}
+✉️ ایمیل: ${s.email}
+🌆 شهر: ${s.city}
+🏗️ محصول: ${s.product}
+`;
 
       if (s.product === "بلوک") {
-        summary += 🔸 ضخامت: ${s.block_thickness}\n🔸 جداره: ${s.walls}\n🔸 طول: ${s.block_length}\n🔸 ارتفاع: ${s.block_height}\n🔸 جنس: ${s.material}\n🔸 رنگ: ${s.block_color}\n;
+        summary += `🔸 ضخامت: ${s.block_thickness}
+🔸 جداره: ${s.walls}
+🔸 طول: ${s.block_length}
+🔸 ارتفاع: ${s.block_height}
+🔸 جنس: ${s.material}
+🔸 رنگ: ${s.block_color}
+`;
       } else {
-        summary += 🔸 نوع کفپوش: ${s.paver_type}\n🔸 رنگ: ${s.paver_color}\n🔸 طول: ${s.paver_length}\n🔸 عرض: ${s.paver_width}\n🔸 ضخامت: ${s.paver_thickness}\n🔸 سطح: ${s.surface_finish}\n;
+        summary += `🔸 نوع کفپوش: ${s.paver_type}
+🔸 رنگ: ${s.paver_color}
+🔸 طول: ${s.paver_length}
+🔸 عرض: ${s.paver_width}
+🔸 ضخامت: ${s.paver_thickness}
+🔸 سطح: ${s.surface_finish}
+`;
       }
 
-      summary += 📦 مقدار: ${s.quantity}\n📝 توضیحات: ${s.message};
+      summary += `📦 مقدار: ${s.quantity}
+📝 توضیحات: ${s.message}`;
 
       await ctx.reply(summary);
 
