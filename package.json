@@ -1,12 +1,13 @@
 {
   "name": "flooring-bot",
   "version": "1.0.0",
+  "description": "Telegram bot for flooring & block enquiry",
   "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "telegraf": "^4.16.3"
-  },
+  "type": "commonjs",
   "scripts": {
     "start": "node index.js"
+  },
+  "dependencies": {
+    "telegraf": "^4.15.3"
   }
 }
